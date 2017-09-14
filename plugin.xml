@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-image-selector" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ImageSelectorPlugin</name>
+    <js-module name="ImageSelectorPlugin" src="www/ImageSelectorPlugin.js">
+        <clobbers target="cordova.plugins.ImageSelectorPlugin" />
+    </js-module>
+	<platform name="android">  
+       <config-file target="res/xml/config.xml" parent="/*">  
+           <feature name="ImageSelectorPlugin">  
+               <param name="android-package" value="com.imageselect.yhck.ImageSelectorPlugin"/>  
+           </feature>  
+       </config-file>  	
+	   
+	    <config-file target="AndroidManifest.xml" parent="/manifest">
+             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+       </config-file>
+	   
+       <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <activity
+            android:name="com.imageselect.yhck.imageselector.ImageSelectorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.imageselect.yhck.imageselector.PreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.imageselect.yhck.imageselector.ClipImageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        </config-file>
+		
+	     <source-file src="src/android/ImageSelectorPlugin.java" target-dir="src/com/imageselect/yhck"/>  
+		 
+	     <source-file src="src/android/imageselector/ImageSelectorActivity.java" target-dir="src/com/imageselect/yhck/imageselector"/>  
+	     <source-file src="src/android/imageselector/ClipImageActivity.java" target-dir="src/com/imageselect/yhck/imageselector"/>  
+	     <source-file src="src/android/imageselector/PreviewActivity.java" target-dir="src/com/imageselect/yhck/imageselector"/>  
+		 
+	     <source-file src="src/android/imageselector/adapter/FolderAdapter.java" target-dir="src/com/imageselect/yhck/imageselector/adapter"/>  
+	     <source-file src="src/android/imageselector/adapter/ImageAdapter.java" target-dir="src/com/imageselect/yhck/imageselector/adapter"/>  
+	     <source-file src="src/android/imageselector/adapter/ImagePagerAdapter.java" target-dir="src/com/imageselect/yhck/imageselector/adapter"/>  
+		 
+	     <source-file src="src/android/imageselector/constant/Constants.java" target-dir="src/com/imageselect/yhck/imageselector/constant"/>  
+		 
+	     <source-file src="src/android/imageselector/entry/Folder.java" target-dir="src/com/imageselect/yhck/imageselector/constant"/>  
+	     <source-file src="src/android/imageselector/entry/Image.java" target-dir="src/com/imageselect/yhck/imageselector/entry"/>  
+		 
+		 <source-file src="src/android/imageselector/model/ImageModel.java" target-dir="src/com/imageselect/yhck/imageselector/model"/>  
+		 
+		 <source-file src="src/android/imageselector/utils/DateUtils.java" target-dir="src/com/imageselect/yhck/imageselector/utils"/>  
+		 <source-file src="src/android/imageselector/utils/ImageSelectorUtils.java" target-dir="src/com/imageselect/yhck/imageselector/utils"/>  
+		 <source-file src="src/android/imageselector/utils/ImageUtil.java" target-dir="src/com/imageselect/yhck/imageselector/utils"/>  
+	     <source-file src="src/android/imageselector/utils/StringUtils.java" target-dir="src/com/imageselect/yhck/imageselector/utils"/>  
+		 
+		 <source-file src="src/android/imageselector/view/ClipImageView.java" target-dir="src/com/imageselect/yhck/imageselector/view"/>  
+		 <source-file src="src/android/imageselector/view/MyViewPager.java" target-dir="src/com/imageselect/yhck/imageselector/view"/>  
+		 <source-file src="src/android/imageselector/view/SquareImageView.java" target-dir="src/com/imageselect/yhck/imageselector/view"/>   
+		 
+		 
+	     <source-file src="src/android/layout/activity_clip_image.xml" target-dir="res/layout" />
+		 <source-file src="src/android/layout/activity_image_select.xml" target-dir="res/layout" />
+		 <source-file src="src/android/layout/activity_preview.xml" target-dir="res/layout" />
+	     <source-file src="src/android/layout/adapter_folder.xml" target-dir="res/layout" />
+		 <source-file src="src/android/layout/adapter_images_item.xml" target-dir="res/layout" />
+		 
+	     <source-file src="src/android/drawable/btn_back_selector.xml" target-dir="res/drawable" />
+		 <source-file src="src/android/drawable/btn_foreground_selector.xml" target-dir="res/drawable" />
+		 <source-file src="src/android/drawable/btn_green_shape.xml" target-dir="res/drawable" />
+		 <source-file src="src/android/drawable/folder_bg.xml" target-dir="res/drawable" />
+		 
+		 <source-file src="src/android/drawable-xhdpi/icon_back.png" target-dir="res/drawable-xhdpi" />
+		 <source-file src="src/android/drawable-xhdpi/icon_image_select.png" target-dir="res/drawable-xhdpi" />
+		 <source-file src="src/android/drawable-xhdpi/icon_image_un_select.png" target-dir="res/drawable-xhdpi" />
+		 <source-file src="src/android/drawable-xhdpi/text_indicator.png" target-dir="res/drawable-xhdpi" />
+		 
+	
+		 
+	</platform>  
+</plugin>
