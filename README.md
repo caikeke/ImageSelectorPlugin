@@ -5,9 +5,11 @@ Android图片选择插件
 2.用android studio 打开项目，在res/values/string.xml中添加src/android/values/string.xml中的内容
 3.按照添加依赖包.PNG，在AndroidStudio中添加包
 4.使用方法
- let dataJson={
-        imagePath:this.mImagePath,
+let dataJson={
+        imgUuid:this.imgUuid,//已经选择的ID
+        mUserPhone:"15251909732"
       };
       cordova.plugins.ImageSelectorPlugin.selectImage(dataJson,(msg)=>{
-        this.mImagePath=msg;
+        this.mImagePath=msg.imgPath;//上传图片的路径
+        this.imgUuid=msg.imgUuid;
       },null);
