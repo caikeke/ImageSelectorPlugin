@@ -7,8 +7,8 @@ Android图片选择插件
 4.使用方法
 let dataJson={
         imgUuid:this.imgUuid,//已经选择的ID
-        mUserPhone:"15251909732"
-      };
+        mUserPhone:"12345678911"//用户电话
+      };
       cordova.plugins.ImageSelectorPlugin.selectImage(dataJson,(msg)=>{
         this.mImagePath=msg.imgPath;//上传图片的路径
         this.imgUuid=msg.imgUuid;
