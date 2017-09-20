@@ -41,8 +41,8 @@
 	     <source-file src="src/android/imageselector/adapter/ImagePagerAdapter.java" target-dir="src/com/imageselect/yhck/imageselector/adapter"/>  
 		 
 	     <source-file src="src/android/imageselector/constant/Constants.java" target-dir="src/com/imageselect/yhck/imageselector/constant"/>  
+	     <source-file src="src/android/imageselector/constant/Folder.java" target-dir="src/com/imageselect/yhck/imageselector/constant"/>  
 		 
-	     <source-file src="src/android/imageselector/entry/Folder.java" target-dir="src/com/imageselect/yhck/imageselector/constant"/>  
 	     <source-file src="src/android/imageselector/entry/Image.java" target-dir="src/com/imageselect/yhck/imageselector/entry"/>  
 		 
 		 <source-file src="src/android/imageselector/model/ImageModel.java" target-dir="src/com/imageselect/yhck/imageselector/model"/>  
